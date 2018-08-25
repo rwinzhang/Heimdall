@@ -399,23 +399,23 @@ bool BridgeManager::DetectDevice(void)
 	switch (usbLogLevel)
 	{
 		case UsbLogLevel::None:
-			libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_NONE);
+			libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 0);
 			break;
 
 		case UsbLogLevel::Error:
-			libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_ERROR);
+			libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 1);
 			break;
 
 		case UsbLogLevel::Warning:
-			libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_WARNING);
+			libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 2);
 			break;
 
 		case UsbLogLevel::Info:
-			libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_INFO);
+			libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 3);
 			break;
 
 		case UsbLogLevel::Debug:
-			libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_DEBUG);
+			libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 4);
 			break;
 	}
 
@@ -464,23 +464,23 @@ int BridgeManager::Initialise(bool resume)
 	switch (usbLogLevel)
 	{
 		case UsbLogLevel::None:
-			libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_NONE);
+			libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 0);
 			break;
 
 		case UsbLogLevel::Error:
-			libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_ERROR);
+			libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 1);
 			break;
 
 		case UsbLogLevel::Warning:
-			libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_WARNING);
+			libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 2);
 			break;
 
 		case UsbLogLevel::Info:
-			libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_INFO);
+			libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 3);
 			break;
 
 		case UsbLogLevel::Debug:
-			libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_DEBUG);
+			libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 4);
 			break;
 	}
 	
@@ -1244,23 +1244,23 @@ void BridgeManager::SetUsbLogLevel(UsbLogLevel usbLogLevel)
 		switch (usbLogLevel)
 		{
 			case UsbLogLevel::None:
-				libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_NONE);
+				libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 0);
 				break;
 
 			case UsbLogLevel::Error:
-				libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_ERROR);
+				libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 1);
 				break;
 
 			case UsbLogLevel::Warning:
-				libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_WARNING);
+				libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 2);
 				break;
 
 			case UsbLogLevel::Info:
-				libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_INFO);
+				libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 3);
 				break;
 
 			case UsbLogLevel::Debug:
-				libusb_set_debug(libusbContext, LIBUSB_LOG_LEVEL_DEBUG);
+				libusb_set_option(libusbContext, LIBUSB_OPTION_LOG_LEVEL, 4);
 				break;
 		}
 	}
